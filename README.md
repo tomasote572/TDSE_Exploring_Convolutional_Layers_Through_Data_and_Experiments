@@ -27,6 +27,24 @@ python app.py
 
 This will launch a web interface where you can upload images of hand gestures for prediction.
 
+### Programmatic Usage
+
+You can also use the prediction function in your own code:
+
+```python
+from PIL import Image
+from app import predict
+
+# Load an image
+img = Image.open("path/to/hand_gesture.jpg")
+
+# Get prediction
+result = predict(img)
+print(result)  # e.g., "Predicted Letter: A"
+```
+
+See `example_usage.py` for more examples.
+
 ## What Type of Images Can I Use? / ¿Qué tipo de imágenes podría utilizar?
 
 ### Supported Images:
@@ -85,6 +103,7 @@ The CNN model consists of:
 .
 ├── app.py              # Gradio web interface
 ├── model.py            # CNN model definition
+├── example_usage.py    # Example usage scripts
 ├── requirements.txt    # Python dependencies
 └── README.md          # This file
 ```
