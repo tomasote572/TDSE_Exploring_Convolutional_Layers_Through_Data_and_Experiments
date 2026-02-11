@@ -21,7 +21,7 @@ class SignLanguageCNN(nn.Module):
     - Fully connected layer (128 units)
     - ReLU activation
     - Dropout (0.5)
-    - Output layer (25 classes for letters A-Y, excluding J and Z)
+    - Output layer (24 classes for letters A-Y, excluding J and Z)
     """
     
     def __init__(self):
@@ -37,7 +37,7 @@ class SignLanguageCNN(nn.Module):
         # Fully connected layers
         # After two pooling layers: 28x28 -> 14x14 -> 7x7
         self.fc1 = nn.Linear(64 * 7 * 7, 128)
-        self.fc2 = nn.Linear(128, 25)  # 25 classes (A-Y, excluding J and Z)
+        self.fc2 = nn.Linear(128, 24)  # 24 classes (A-Y, excluding J and Z)
         
         # Dropout
         self.dropout = nn.Dropout(0.5)
@@ -53,7 +53,7 @@ class SignLanguageCNN(nn.Module):
             x: Input tensor of shape (batch_size, 1, 28, 28)
             
         Returns:
-            Output logits of shape (batch_size, 25)
+            Output logits of shape (batch_size, 24)
         """
         # First conv block
         x = self.pool(self.relu(self.conv1(x)))
