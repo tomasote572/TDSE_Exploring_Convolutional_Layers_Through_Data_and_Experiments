@@ -103,5 +103,5 @@ pip install torch torchvision pandas matplotlib seaborn pillow gradio scikit-lea
 
 ## deployment
 - ![alt text](imagenes/9.jpg)
-- ![alt text](imagenes/2.jpg)
+- ![alt text](imagenes/1.1.jpg)
 ---
