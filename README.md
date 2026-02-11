@@ -77,7 +77,7 @@ The CNN model consists of:
 - MaxPooling layers
 - 2 Fully connected layers
 - Dropout for regularization
-- Output layer with 25 classes (24 letters: A-Y excluding J and Z)
+- Output layer with 24 classes (letters A-Y excluding J and Z)
 
 ## Project Structure
 
